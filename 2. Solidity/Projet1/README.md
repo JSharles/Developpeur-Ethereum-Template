@@ -4,57 +4,51 @@
 
 1. Inscription des participants: 
     
-    ![Screenshot 2025-02-10 at 17.14.21.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.14.21.png)
+![Screenshot_2025-02-10_at_17 14 21](https://github.com/user-attachments/assets/0f799008-2a34-4d6e-a22a-a97aa2b34c61)
+
+2. Ouverture de la phase de dépôt des propositions:
+
+![Screenshot_2025-02-10_at_17 16 54](https://github.com/user-attachments/assets/5cd21994-6fca-4518-b947-5e52bd0d770b)
+
+3. Ajoutez des propositions avec **`registerProposal(address, "Description")`** en utilisant une adresse de votant enregistrée.
     
+![Screenshot_2025-02-10_at_17 18 18](https://github.com/user-attachments/assets/0658c620-d763-4dc4-87b0-2f82d0dc3f39)
 
-1. Ouverture de la phase de dépôt des propositions:
+4. Clôturer la phase de dépôt des propositions:
 
-    
-    ![Screenshot 2025-02-10 at 17.16.54.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.16.54.png)
-    
+![Screenshot_2025-02-10_at_17 19 14](https://github.com/user-attachments/assets/97553818-1dad-402f-9502-6b5f5e8a8f77)
 
-1. Ajoutez des propositions avec **`registerProposal(address, "Description")`** en utilisant une adresse de votant enregistrée.
-    
-    ![Screenshot 2025-02-10 at 17.18.18.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.18.18.png)
-    
+5. Ouverture de la phase de vote:
 
-1. Clôturer la phase de dépôt des propositions:
+![Screenshot_2025-02-10_at_17 21 27](https://github.com/user-attachments/assets/0e238a61-3c4e-439a-b7e9-1da41903423a)
 
-![Screenshot 2025-02-10 at 17.19.14.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.19.14.png)
+6. Récupérer les propositions disponibles:
 
-1. Ouverture de la phase de vote:
+![Screenshot_2025-02-10_at_17 26 36](https://github.com/user-attachments/assets/0db082cb-0559-4bb8-89bb-7dbda208d213)
 
-![Screenshot 2025-02-10 at 17.21.27.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.21.27.png)
+7. Procéder à un vote:
 
-1. Récupérer les propositions disponibles:
-
-![Screenshot 2025-02-10 at 17.26.36.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.26.36.png)
-
-1. Procéder à un vote:
-
-![Screenshot 2025-02-10 at 17.27.52.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.27.52.png)
+![Screenshot_2025-02-10_at_17 27 52](https://github.com/user-attachments/assets/8f6b490e-9401-424e-8bb6-8919a411c192)
 
 Appelez vote() en passant l’index de la position de l’élément en argument.
-
 Exemple : Appelez **`vote(0)`** pour voter pour la première proposition (en changeant de compte pour simuler plusieurs votants).
 
-1. Clôture de la session de vote:
+8. Clôture de la session de vote:
 
-![Screenshot 2025-02-10 at 17.29.36.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.29.36.png)
+![Screenshot_2025-02-10_at_17 29 36](https://github.com/user-attachments/assets/8107d0a5-dccf-4350-a6fc-832f33115f88)
 
-1. Procéder au dépouillement:
+9. Procéder au dépouillement:
 
-![Screenshot 2025-02-10 at 17.31.50.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.31.50.png)
+![Screenshot_2025-02-10_at_17 31 50](https://github.com/user-attachments/assets/a3175d20-d4d2-4455-af5e-7e7e903e916a)
 
-1. Ouverture de l’accès aux résultats
+10. Ouverture de l’accès aux résultats
 
-![Screenshot 2025-02-10 at 17.33.50.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.33.50.png)
+![Screenshot_2025-02-10_at_17 33 50](https://github.com/user-attachments/assets/905e7651-bd70-4a27-b7ec-01cf4388e4fe)
 
-1. Récupérer la proposition gagnante et son auteur:
+11. Récupérer la proposition gagnante et son auteur:
     
-    ![Screenshot 2025-02-10 at 17.34.28.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.34.28.png)
+![Screenshot_2025-02-10_at_17 34 28](https://github.com/user-attachments/assets/0c6aa9d5-f6a8-4a4f-8661-943172c289e3)
     
+12. Réinitialisation:
 
-1. Réinitialisation:
-
-![Screenshot 2025-02-10 at 17.36.24.png](PROJET%201%20196d5e95fa2480ae8e14e01bafe5486d/Screenshot_2025-02-10_at_17.36.24.png)
+![Screenshot_2025-02-10_at_17 36 24](https://github.com/user-attachments/assets/c25e3050-70de-4743-a179-770fb2fae66e)

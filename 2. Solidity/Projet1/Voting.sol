@@ -25,16 +25,16 @@ contract Voting is Ownable {
         uint voteCount;
     }
 
-    mapping(address => Voter) public _voters;
+    mapping(address => Voter) private  _voters;
+    mapping(uint => address) private  _proposalOwner;
 
-    mapping(uint => address) public _proposalOwner;
-
-    Proposal[] public _proposals;
+    Proposal[] private  _proposals;
+    address[] private _voterAddresses;
          
     uint winningProposalId;
-    uint[] public winningProposals;
+    uint[] private  winningProposals;
     
-    WorkflowStatus public ballotStatus;
+    WorkflowStatus private  ballotStatus;
 
     event WorkflowStatusChange(WorkflowStatus previousStatus, WorkflowStatus newStatus);
     event VoterRegistered(address voterAddress);
@@ -58,7 +58,7 @@ contract Voting is Ownable {
         _;
     }
 
-    function getBallotStatus() external view returns (WorkflowStatus){
+    function getBallotStatus() external view  isVoterRegistered(msg.sender) returns (WorkflowStatus){
         return ballotStatus;
     }
 
@@ -98,6 +98,7 @@ contract Voting is Ownable {
             }
             
             _voters[voters[i]] = Voter(true, false, 0);
+            _voterAddresses.push(voters[i]);
             emit VoterRegistered(voters[i]);
         }
     }
@@ -147,13 +148,36 @@ contract Voting is Ownable {
         }
     }
     
-    function getWinner() external view checkStatus(ballotStatus, WorkflowStatus.VotesTallied) returns (address) {
+    function getWinner() external view checkStatus(ballotStatus, WorkflowStatus.VotesTallied) isVoterRegistered(msg.sender) returns (address) {
         require(winningProposals.length == 1, "The vote requires another round as some proposals have ended in a tie");
         return _proposalOwner[winningProposalId];
     }
         
-    function getWinningProposal() external view checkStatus(ballotStatus, WorkflowStatus.VotesTallied) returns (Proposal memory) {
+    function getWinningProposal() external view checkStatus(ballotStatus, WorkflowStatus.VotesTallied) isVoterRegistered(msg.sender) returns (Proposal memory) {
         require(winningProposals.length == 1, "The vote requires another round as some proposals have ended in a tie");
         return _proposals[winningProposalId];
+    }
+
+    function getVoters() external view isVoterRegistered(msg.sender) returns (address[] memory) {
+        return _voterAddresses;
+    }
+
+    function resetVoting() external onlyOwner {
+        for (uint i = 0; i < _voterAddresses.length; i++) {
+            delete _voters[_voterAddresses[i]];
+        }
+        
+        delete _voterAddresses;
+        
+        for (uint i = 0; i < _proposals.length; i++) {
+            delete _proposalOwner[i];
+        }
+        
+        delete _proposals;
+        delete winningProposals;
+        winningProposalId = 0;
+        ballotStatus = WorkflowStatus.registerVoters;
+        
+        emit WorkflowStatusChange(WorkflowStatus.VotesTallied, ballotStatus);
     }
 }

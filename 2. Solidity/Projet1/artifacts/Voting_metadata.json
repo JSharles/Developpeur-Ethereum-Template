@@ -148,91 +148,6 @@
 				"type": "event"
 			},
 			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "_proposalOwner",
-				"outputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "_proposals",
-				"outputs": [
-					{
-						"internalType": "string",
-						"name": "description",
-						"type": "string"
-					},
-					{
-						"internalType": "uint256",
-						"name": "voteCount",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "address",
-						"name": "",
-						"type": "address"
-					}
-				],
-				"name": "_voters",
-				"outputs": [
-					{
-						"internalType": "bool",
-						"name": "isRegistered",
-						"type": "bool"
-					},
-					{
-						"internalType": "bool",
-						"name": "hasVoted",
-						"type": "bool"
-					},
-					{
-						"internalType": "uint256",
-						"name": "votedProposalId",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
-				"inputs": [],
-				"name": "ballotStatus",
-				"outputs": [
-					{
-						"internalType": "enum Voting.WorkflowStatus",
-						"name": "",
-						"type": "uint8"
-					}
-				],
-				"stateMutability": "view",
-				"type": "function"
-			},
-			{
 				"inputs": [],
 				"name": "countVotes",
 				"outputs": [],
@@ -286,6 +201,19 @@
 						"internalType": "struct Voting.Proposal[]",
 						"name": "",
 						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getVoters",
+				"outputs": [
+					{
+						"internalType": "address[]",
+						"name": "",
+						"type": "address[]"
 					}
 				],
 				"stateMutability": "view",
@@ -382,6 +310,13 @@
 			},
 			{
 				"inputs": [],
+				"name": "resetVoting",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
 				"name": "startProposalsRegistration",
 				"outputs": [],
 				"stateMutability": "nonpayable",
@@ -425,25 +360,6 @@
 				"name": "vote",
 				"outputs": [],
 				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"inputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"name": "winningProposals",
-				"outputs": [
-					{
-						"internalType": "uint256",
-						"name": "",
-						"type": "uint256"
-					}
-				],
-				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -497,11 +413,11 @@
 	},
 	"sources": {
 		"2. Solidity/Projet1/Voting.sol": {
-			"keccak256": "0x091018f79aea25f716198f14c570efe2098437575360561e557f724804539015",
+			"keccak256": "0x5aca90739929bdabf4ff4e9356fbcc21d506abdca34461e7f79f957cfaa9e9b7",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://2fc46b20eabc3f462077e39095fd0ae8880aabe524fcec3031b2f06158f1b252",
-				"dweb:/ipfs/QmfAX5wsWRUe3faS77VW8RfnuJw8x1swpxVeQUeJynGRHR"
+				"bzz-raw://edf8b7e0d9d5f431cab71d223750a29da27e7e070ab88663840c9263ac9aa02d",
+				"dweb:/ipfs/QmSfs6Xp88E8nyiL4JKWgzVrLiUnpRxUa4WzhbUdRsxU68"
 			]
 		},
 		"@openzeppelin/contracts/access/Ownable.sol": {

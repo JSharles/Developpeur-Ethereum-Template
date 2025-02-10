@@ -1,0 +1,149 @@
+{
+	"compiler": {
+		"version": "0.8.28+commit.7893614a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "ProposalRegisterd",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "voter",
+						"type": "address"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "proposalId",
+						"type": "uint256"
+					}
+				],
+				"name": "Voted",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "voterAddress",
+						"type": "address"
+					}
+				],
+				"name": "VoterRegistered",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "voterList",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasVoted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votedProposalId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "voterProposals",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "hasVoted",
+						"type": "bool"
+					},
+					{
+						"internalType": "uint256",
+						"name": "votedProposalId",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"2. Solidity/Projet1/Voters.sol": "Voters"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"2. Solidity/Projet1/Voters.sol": {
+			"keccak256": "0x271b80b8e650c905ca484e6bf5870a5c39939df3b586bdd58fdafbada2cf2c39",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bcfd5a813faf618fbae0f4bdab926406d62a5398a50db794ae5950b59de5cfbc",
+				"dweb:/ipfs/QmdBGVftvGYNLbvL9vAsFEer4odYkqUy2vDN11Ao7XLJgz"
+			]
+		}
+	},
+	"version": 1
+}
